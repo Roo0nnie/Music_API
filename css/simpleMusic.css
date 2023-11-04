@@ -1,0 +1,157 @@
+:root {
+    --container: #D2C3CA;
+    --playButton:#722A5D;
+    --previous:#A25270;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+body {
+background-color: var(--playButton);
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+width: 100%;
+transition: background-color .5s;
+}
+
+.player {
+background-color: var(--container);
+padding: .5rem 2rem;
+border-radius: 20px;
+height: 80vh;
+}
+
+.details {
+display: flex;
+align-items: center;
+flex-direction: column;
+justify-content: center;
+}
+
+.track-art {
+margin: 20px 10px;
+height: 250px;
+width: 250px;
+background-image: URL(/asset/7.png);
+background-size: cover;
+background-position: center;
+border-radius: 20px;
+}
+
+.track-name {
+    margin-top: .5em;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.track-artist {
+    color: rgb(109, 102, 102);
+    font-size: 15px;
+}
+
+/* Using flex with the row direction to
+align items in a horizontal direction */
+.buttons {
+display: flex;
+flex-direction: row;
+align-items: center;
+color: var(--playButton);
+}
+
+.playpause-track,.prev-track,.next-track {
+padding: 15px 25px;
+opacity: .8;
+transition: opacity .2s;
+}
+
+.playpause-track:hover,.prev-track:hover,.next-track:hover {
+opacity: 1.0;
+}
+
+.slider_container {
+width: 100%;
+}
+
+.seek_slider, .volume_slider {
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+height: 5px;
+background: black;
+opacity: 0.7;
+-webkit-transition: .2s;
+transition: opacity .2s;
+border-radius: 5px;
+}
+
+.seek_slider::-webkit-slider-thumb,.volume_slider::-webkit-slider-thumb {
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+width: 15px;
+height: 15px;
+background: white;
+cursor: pointer;
+border-radius: 50%;
+}
+
+.seek_slider {
+width: 100%;
+}
+
+.current-time,.total-duration {
+padding: 5px 10px;
+}
+.track-time {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 12px;
+}
+
+i.fa-play-circle,i.fa-pause-circle,i.fa-step-forward,i.fa-step-backward {
+cursor: pointer;
+}
+
+
+/* Explore side */
+h1 {
+    margin-top: 1rem;
+}
+.explore {
+    background-color: var(--container);
+    padding: .5rem 2rem;
+    border-radius: 20px;
+    height: 80vh;
+    margin-left: 2rem;
+    width: 50%;
+}
+#content {
+    margin-top: 2rem;
+    width: 100%;
+}
+nav {
+    margin-top: 2rem;
+}
+li {
+    display: inline-block;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+li:first-child {
+    margin-left: 0;
+}
+#param-lyrics {
+    width: 100%;
+    height: 50vh;
+    overflow: hidden; 
+}
