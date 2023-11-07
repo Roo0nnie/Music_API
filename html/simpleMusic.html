@@ -7,12 +7,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
     />
-
     <link rel="stylesheet" type="text/css" href="/css/simpleMusic.css" />
-  </head>
 
+  </head>
   <body>
-    
+ 
     <div class="player">
       <!-- Define the section for displaying details -->
       <div class="details">
@@ -61,24 +60,25 @@
           <li id="artist">Related Artist</li>
         </ul>
       </nav>
-      <div id="content">
-        <p>Ronnie Lyrics</p>
+      <div class="content">
+        <p class="pcontent"></p>
       </div>
     </div>
-    <script>
-      document.getElementById('albums').addEventListener('click', function() {
-        document.getElementById('content').innerHTML = '<p>Ronnie Albums</p>'
-    })
-      
-      document.getElementById('lyrics').addEventListener('click', function() {
-        document.getElementById('content').innerHTML = '<p id="param-lyrics">Ronnie Lyrics</p>'
-    })
-    
-    document.getElementById('artist').addEventListener('click', function() {
-      document.getElementById('content').innerHTML = '<p>Ronnie Artist edit and push</p>'
-    })
-    </script>
-    <script src="/js/simpleMusic.js"></script>
 
   </body>
+  <script>
+ //   document.getElementById('albums').addEventListener('click', function() {
+ //     document.getElementById('content').innerHTML = '<p>Ronnie Albums</p>'
+ // })
+    
+ //   document.getElementById('lyrics').addEventListener('click', function() {
+ //     document.getElementById('content').innerHTML = '<p id="param-lyrics">Ronnie Lyrics</p>'
+ // })
+  
+ // document.getElementById('artist').addEventListener('click', function() {
+ //   document.getElementById('content').innerHTML = '<p>Ronnie Artist edit and push</p>'
+ // })
+  </script>
+  <script src="/js/simpleMusic.js"></script>
+  
 </html>

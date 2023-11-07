@@ -1,3 +1,29 @@
+const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': '429cbef36fmshf88967538fc9316p1fbea5jsne554239940ea',
+      'X-RapidAPI-Host': 'genius-song-lyrics1.p.rapidapi.com'
+    }
+  };
+    fetch('https://genius-song-lyrics1.p.rapidapi.com/search/?q=bruno%20mars&per_page=10&page=1', options)
+    .then(response => response.json())
+    .then(response => result(response))
+    .catch(err => console.error(err));
+  
+//   let track_list = [];
+  
+  function result(data) {
+    for(var i = 0;i< data.hits.length;i++) {
+        track_list.push({
+            name: data.hits[i].result.full_title,
+            artist: data.hits[i].result.artist_names,
+            image: data.hits[i].result.header_image_url,
+            path: data.hits[i].result.path
+        })
+    }
+    
+  }
+
 
 let track_art = document.querySelector(".track-art");
 let track_name = document.querySelector(".track-name");
@@ -18,18 +44,7 @@ let updateTimer;
 let curr_track = document.createElement('audio');
 
 let track_list = [
-    {
-        name: 'All Too Well (Taylor Version)',
-        artist: "Taylor Swift",
-        image: "/asset/image.png",
-        path: "Night_Owl.mp3"
-    },
-    {
-        name: 'Too Well (Taylor Version)',
-        artist: "Taylor Swift",
-        image: "/asset/7.png",
-        path: "Night_Owl.mp3"
-    }
+   
 ]
 function loadTrack(track_index) {
     clearInterval(updateTimer);
@@ -43,7 +58,7 @@ function loadTrack(track_index) {
         track_name.textContent = track_list[track_index].name;
         track_artist.textContent = track_list[track_index].artist;
 
-    updateTimer = setInterval(seekUpdate, 1000);
+    updateTimer = setInterval(1000);
 
     curr_track.addEventListener("ended", nextTrack);
     }
@@ -98,6 +113,6 @@ function loadTrack(track_index) {
 loadTrack(track_index);
 
 
-// 
+
 
 
