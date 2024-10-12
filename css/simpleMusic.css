@@ -10,148 +10,106 @@
 	box-sizing: border-box;
 	font-family: sans-serif;
 }
-
 body {
-background-color: var(--playButton);
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh;
-width: 100%;
-transition: background-color .5s;
-}
-
-.player {
-background-color: var(--container);
-padding: .5rem 2rem;
-border-radius: 20px;
-height: 80vh;
-}
-
-.details {
-display: flex;
-align-items: center;
-flex-direction: column;
-justify-content: center;
-}
-
-.track-art {
-margin: 20px 10px;
-height: 250px;
-width: 250px;
-background-image: URL(/asset/7.png);
-background-size: cover;
-background-position: center;
-border-radius: 20px;
-}
-
-.track-name {
-    margin-top: .5em;
-    font-size: 1rem;
-    font-weight: bold;
-    padding-bottom: 5px;
-}
-
-.track-artist {
-    color: rgb(109, 102, 102);
-    font-size: 15px;
-}
-
-/* Using flex with the row direction to
-align items in a horizontal direction */
-.buttons {
-display: flex;
-flex-direction: row;
-align-items: center;
-color: var(--playButton);
-}
-
-.playpause-track,.prev-track,.next-track {
-padding: 15px 25px;
-opacity: .8;
-transition: opacity .2s;
-}
-
-.playpause-track:hover,.prev-track:hover,.next-track:hover {
-opacity: 1.0;
-}
-
-.slider_container {
-width: 100%;
-}
-
-.seek_slider, .volume_slider {
--webkit-appearance: none;
--moz-appearance: none;
-appearance: none;
-height: 5px;
-background: black;
-opacity: 0.7;
--webkit-transition: .2s;
-transition: opacity .2s;
-border-radius: 5px;
-}
-
-.seek_slider::-webkit-slider-thumb,.volume_slider::-webkit-slider-thumb {
--webkit-appearance: none;
--moz-appearance: none;
-appearance: none;
-width: 15px;
-height: 15px;
-background: white;
-cursor: pointer;
-border-radius: 50%;
-}
-
-.seek_slider {
-width: 100%;
-}
-
-.current-time,.total-duration {
-padding: 5px 10px;
-}
-.track-time {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+  }
+  
+  .player {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .track-art {
+    width: 100%;
+    height: 300px;
+    background-color: #f3f3f3;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  
+  .track-name, .track-artist {
+    font-size: 1.5em;
+    margin: 10px 0;
+  }
+  
+  .slider_container {
+    margin: 20px 0;
+  }
+  
+  .track-time {
     display: flex;
     justify-content: space-between;
+    font-size: 0.9em;
+  }
+  
+  .seek-slider input {
     width: 100%;
-    margin-top: 1rem;
-    font-size: 12px;
-}
-
-i.fa-play-circle,i.fa-pause-circle,i.fa-step-forward,i.fa-step-backward {
-cursor: pointer;
-}
-
-
-/* Explore side */
-h1 {
-    margin-top: 1rem;
-}
-.explore {
-    background-color: var(--container);
-    padding: .5rem 2rem;
-    border-radius: 20px;
-    height: 80vh;
-    margin-left: 2rem;
-    width: 50%;
-}
-.content {
-    margin-top: 2rem;
-    width: 100%;
-}
-nav {
-    margin-top: 2rem;
-}
-li {
-    display: inline-block;
-    margin-left: 2rem;
+  }
+  
+  .buttons {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .buttons i {
+    margin: 0 20px;
     cursor: pointer;
-}
-li:first-child {
-    margin-left: 0;
-}
-#param-lyrics {
-    width: 100%;
-    height: 50vh;
-    overflow: hidden; 
-}
+  }
+  
+  .explore {
+    margin-top: 50px;
+  }
+  
+  .explore h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .search {
+    margin-bottom: 20px;
+  }
+  
+  .search input {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .search button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .search button:hover {
+    background-color: #0056b3;
+  }
+  
+  .search-results ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .search-results li {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  

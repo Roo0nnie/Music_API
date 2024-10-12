@@ -5,13 +5,17 @@ const options = {
       'X-RapidAPI-Host': 'genius-song-lyrics1.p.rapidapi.com'
     }
   };
-    fetch('https://genius-song-lyrics1.p.rapidapi.com/search/?q=bruno%20mars&per_page=10&page=1', options)
+
+  function searchSong() {
+    let searchTerm = document.getElementById('searchTerm').value;
+
+    fetch(`https://genius-song-lyrics1.p.rapidapi.com/search/?q=${encodeURIComponent(searchTerm)}&per_page=10&page=1`, options)
     .then(response => response.json())
     .then(response => result(response))
     .catch(err => console.error(err));
-  
-//   let track_list = [];
-  
+}
+
+
   function result(data) {
     for(var i = 0;i< data.hits.length;i++) {
         track_list.push({

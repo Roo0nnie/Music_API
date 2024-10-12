@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Music Player</title>
+    <link rel="stylesheet" type="text/css" href="./css/simpleMusic.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+</head>
+<body>
+    <div class="player">
+        <div class="details">
+            <div class="track-art"></div>
+            <div class="track-name">Track Name</div>
+            <div class="track-artist">Track Artist</div>
+        </div>
+
+        <div class="slider_container">
+            <div class="track-time">
+                <div class="current-time">00:00</div>
+                <div class="total-duration">00:00</div>
+            </div>
+            <div class="seek-slider">
+                <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()" />
+            </div>
+        </div>
+
+        <div class="buttons">
+            <div class="prev-track" onclick="prevTrack()">
+                <i class="fa fa-step-backward fa-2x"></i>
+            </div>
+            <div class="playpause-track" onclick="playpauseTrack()">
+                <i class="fa fa-play-circle fa-5x"></i>
+            </div>
+            <div class="next-track" onclick="nextTrack()">
+                <i class="fa fa-step-forward fa-2x"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="explore">
+        <h1>Explore</h1>
+        <div class="search">
+            <input type="text" id="searchTerm" placeholder="Search for a song...">
+            <button type="button" onclick="searchSong()">Search</button>
+        </div>
+        <div class="search-results">
+            <ul id="results"></ul>
+        </div>
+    </div>
+
+    <script src="./js/simpleMusic.js"></script>
+</body>
+</html>
